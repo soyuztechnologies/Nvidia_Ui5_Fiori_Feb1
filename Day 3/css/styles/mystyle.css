@@ -1,0 +1,53 @@
+.spiderman {
+    color: blue;
+    background-color: yellow;
+    border: 1px solid black;
+    text-align: center;
+}
+.ironman{
+    color: brown;
+    background-color: chartreuse;
+    height: 100px;
+    padding: 3px;
+}
+.avengers{
+    width: 180px;
+    border: 1px solid black;
+    float: left;
+    margin: 3px;
+}
+
+input{
+    background-color: darkcyan;
+}
+
+input:focus{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: x-large;
+    font-family: cursive;
+}
+
+th, td{
+    border : 1px solid black;
+}
+
+th{
+    background: brown;
+    color: aqua;
+    font-weight: bolder;
+    font-family: sans-serif;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+    background-color: deepskyblue;
+}
+
+tr:nth-child(odd) {
+    background-color: forestgreen;
+}

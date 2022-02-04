@@ -1,0 +1,58 @@
+console.log("hello world!");
+alert("hey whats up!");
+var x = 10;
+typeof(x);
+x = '10';
+typeof(x);
+x = "20";
+var y = parseInt(x);
+y;
+typeof(y);
+x = false;
+typeof(x);
+var arrFruits = ["Apple","Banana","Cherry"];
+arrFruits[0];
+arrFruits[2];
+arrFruits.length;
+arrFruits.length - 1;
+arrFruits[arrFruits.length - 1];
+arrFruits.push("Mango");
+arrFruits;
+arrFruits.pop();
+arrFruits;
+arrFruits.splice(1,1);
+arrFruits;
+arrFruits.splice(1,0,["Mango","Guava"]);
+arrFruits;
+arrFruits.splice(1,1);
+arrFruits.splice(1,0,"Mango");
+arrFruits;
+for(var i=0;i<arrFruits.length;i++){
+  var item = arrFruits[i];
+  console.log(item);
+};
+var name = "Anubhav Oberoy";
+name.split(" ");
+name.split(" ")[0];
+name.split(" ")[1];
+var x= "christopher";
+var y = "columbus";
+x.concat(y);
+x = x.concat(" " + y);
+x.toUpperCase();
+
+var oEmp = {
+	"empId": 5000,
+	"empName": "Anubhav",
+	"salary": 8500,
+	"curr": "USD",
+	"hobbies": ["dancing", "singing", "hichaiking", "yoga", "swimming"]
+};
+oEmp.empId;
+oEmp.empName;
+oEmp.empName = "Ananya";;
+oEmp;
+for(var item in oEmp){ console.log(item) };
+for(var item in oEmp){ 
+         console.log(oEmp[item]);
+};

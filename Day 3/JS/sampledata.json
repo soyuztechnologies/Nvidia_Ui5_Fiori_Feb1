@@ -1,0 +1,76 @@
+{
+	"empStr": {
+		"empId": 1000,
+		"empName": "Anubhav",
+		"salary": 9000,
+		"currency": "EUR"
+	},
+	"empTab": [
+        {
+			"empId": 9000,
+			"empName": "Ananya",
+			"salary": 65000,
+			"currency": "USD",
+			"smoker": false,
+			"mStatus": "S",
+			"gender": "F",
+			"rating": 5,
+			"city": "Delhi"
+		},
+		{
+			"empId": 9001,
+			"empName": "Shikhar",
+			"salary": 15200,
+			"currency": "INR",
+			"smoker": true,
+			"mStatus": "M",
+			"gender": "M",
+			"rating": 4,
+			"city": "Agra"
+		},
+		{
+			"empId": 9002,
+			"empName": "Vinit",
+			"salary": 85000,
+			"currency": "USD",
+			"smoker": true,
+			"mStatus": "S",
+			"gender": "M",
+			"rating": 3,
+			"city": "Pune"
+		},
+		{
+			"empId": 9003,
+			"empName": "Megha",
+			"salary": 8500,
+			"currency": "AED",
+			"smoker": true,
+			"mStatus": "M",
+			"gender": "F",
+			"rating": 2,
+			"city": "Bangalore"
+		},
+		{
+			"empId": 9004,
+			"empName": "Sonal",
+			"salary": 7800,
+			"currency": "EUR",
+			"smoker": false,
+			"mStatus": "S",
+			"gender": "F",
+			"rating": 4,
+			"city": "Sonipat"
+		},
+		{
+			"empId": 9005,
+			"empName": "Riyaz",
+			"salary": 7800,
+			"currency": "AED",
+			"smoker": false,
+			"mStatus": "S",
+			"gender": "M",
+			"rating": 5,
+			"city": "Ferozpur"
+		}
+	]
+}
