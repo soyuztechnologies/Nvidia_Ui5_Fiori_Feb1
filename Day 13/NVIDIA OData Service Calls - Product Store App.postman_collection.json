@@ -1,0 +1,304 @@
+{
+	"info": {
+		"_postman_id": "7a4debf5-1aaa-4b5c-94b2-4ff9b6ea3aba",
+		"name": "NVIDIA OData Service Calls - Product Store App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET ALL Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{hostname}}:8021/sap/opu/odata/sap/ZNVID_XX_ODATA_SRV/ProductSet?$format=json",
+					"protocol": "http",
+					"host": [
+						"{{hostname}}"
+					],
+					"port": "8021",
+					"path": [
+						"sap",
+						"opu",
+						"odata",
+						"sap",
+						"ZNVID_XX_ODATA_SRV",
+						"ProductSet"
+					],
+					"query": [
+						{
+							"key": "$format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET SINGLE Product By Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"value": "fetch",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{hostname}}:8021/sap/opu/odata/sap/ZNVID_XX_ODATA_SRV/ProductSet('HT-1010')?$format=json",
+					"protocol": "http",
+					"host": [
+						"{{hostname}}"
+					],
+					"port": "8021",
+					"path": [
+						"sap",
+						"opu",
+						"odata",
+						"sap",
+						"ZNVID_XX_ODATA_SRV",
+						"ProductSet('HT-1010')"
+					],
+					"query": [
+						{
+							"key": "$format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL Products - filter operation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://s4dev.st.com:8021/sap/opu/odata/sap/ZNVID_XX_ODATA_SRV/ProductSet?$format=json&$filter=CATEGORY eq 'Mice'",
+					"protocol": "http",
+					"host": [
+						"s4dev",
+						"st",
+						"com"
+					],
+					"port": "8021",
+					"path": [
+						"sap",
+						"opu",
+						"odata",
+						"sap",
+						"ZNVID_XX_ODATA_SRV",
+						"ProductSet"
+					],
+					"query": [
+						{
+							"key": "$format",
+							"value": "json"
+						},
+						{
+							"key": "$filter",
+							"value": "CATEGORY eq 'Mice'"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Create Products",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"value": "2sufBrlkVYtDrfS9wogteg==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"PRODUCT_ID\": \"NV-9999\",\r\n\t\"TYPE_CODE\": \"PR\",\r\n\t\"CATEGORY\": \"Notebooks\",\r\n\t\"NAME\": \"My Nvidia Product\",\r\n\t\"DESCRIPTION\": \"Bitcoin Graphics Card\",\r\n\t\"SUPPLIER_ID\": \"0100000051\",\r\n\t\"SUPPLIER_NAME\": \"TECUM\",\r\n\t\"TAX_TARIF_CODE\": \"1 \",\r\n\t\"MEASURE_UNIT\": \"EA\",\r\n\t\"PRICE\": \"5050.00\",\r\n\t\"CURRENCY_CODE\": \"USD\",\r\n\t\"DIM_UNIT\": \"CM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{hostname}}:8021/sap/opu/odata/sap/ZNVID_XX_ODATA_SRV/ProductSet",
+					"protocol": "http",
+					"host": [
+						"{{hostname}}"
+					],
+					"port": "8021",
+					"path": [
+						"sap",
+						"opu",
+						"odata",
+						"sap",
+						"ZNVID_XX_ODATA_SRV",
+						"ProductSet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - Update Single product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"value": "2sufBrlkVYtDrfS9wogteg==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"PRODUCT_ID\": \"NV-9999\",\r\n\t\"DESCRIPTION\": \"Solana and Blockchain card\",\r\n\t\"PRICE\": \"5050.00\",\r\n\t\"CURRENCY_CODE\": \"USD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{hostname}}:8021/sap/opu/odata/sap/ZNVID_XX_ODATA_SRV/ProductSet('NV-9999')",
+					"protocol": "http",
+					"host": [
+						"{{hostname}}"
+					],
+					"port": "8021",
+					"path": [
+						"sap",
+						"opu",
+						"odata",
+						"sap",
+						"ZNVID_XX_ODATA_SRV",
+						"ProductSet('NV-9999')"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE - Remove data for product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"value": "2sufBrlkVYtDrfS9wogteg==",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{hostname}}:8021/sap/opu/odata/sap/ZNVID_XX_ODATA_SRV/ProductSet('NV-9999')",
+					"protocol": "http",
+					"host": [
+						"{{hostname}}"
+					],
+					"port": "8021",
+					"path": [
+						"sap",
+						"opu",
+						"odata",
+						"sap",
+						"ZNVID_XX_ODATA_SRV",
+						"ProductSet('NV-9999')"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL Products - pagination Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://s4dev.st.com:8021/sap/opu/odata/sap/ZNVID_XX_ODATA_SRV/ProductSet?$format=json&$top=2&$skip=4",
+					"protocol": "http",
+					"host": [
+						"s4dev",
+						"st",
+						"com"
+					],
+					"port": "8021",
+					"path": [
+						"sap",
+						"opu",
+						"odata",
+						"sap",
+						"ZNVID_XX_ODATA_SRV",
+						"ProductSet"
+					],
+					"query": [
+						{
+							"key": "$format",
+							"value": "json"
+						},
+						{
+							"key": "$top",
+							"value": "2"
+						},
+						{
+							"key": "$skip",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "YOUR PASSORD",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "YOUR SUSER",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "hostname",
+			"value": "s4dev.st.com"
+		},
+		{
+			"key": "port",
+			"value": "8021"
+		}
+	]
+}
